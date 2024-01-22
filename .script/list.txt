@@ -1,0 +1,15 @@
+.config/nvim/* nvim
+.bashrc bash
+.bash_aliases bash
+.bash_profile bash
+.bash_logout bash
+.config/i3/* i3
+.config/polybar/* polybar
+.xinitrc x11
+.fonts/* fonts
+.config/alacritty/* alacritty
+.config/glava/* glava
+.config/ohmyposh/* ohmyposh
+.config/rofi/* rofi
+.config/spicetify/* spicetify
+.config/Thunar/* Thunar

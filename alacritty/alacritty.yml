@@ -1,0 +1,23 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import color scheme from themes folder
+import:
+  - ~/.config/alacritty/themes/themes/tokyo-night.yaml
+
+# Window background opacity
+window:
+  opacity: 0.9
+
+# Font configuration
+font:
+  size: 8.0
+
+# Cursor
+cursor:
+  style:
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Underline
+    blinking: On

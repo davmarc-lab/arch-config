@@ -1,0 +1,11 @@
+import = ["/home/mil2442/.config/alacritty/themes/themes/tokyo-night.toml"]
+
+[cursor.style]
+blinking = "On"
+shape = "Underline"
+
+[font]
+size = 8.0
+
+[window]
+opacity = 0.9
