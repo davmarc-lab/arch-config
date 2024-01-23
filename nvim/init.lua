@@ -1,21 +1,28 @@
--- Definee leader key
 vim.g.mapleader = " "
 
--- Load all plugins and..
-require("core.plugins")
+-- don't open netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_auto_close = 1
 
--- ...all plugin config files:
-require("core.plugin_config.coc")
-require("core.plugin_config.nvim-comment")
-require("core.plugin_config.lualine")
-require("core.plugin_config.neo-tree")
-require("core.plugin_config.treesitter")
-require("core.plugin_config.undotree")
-require("core.plugin_config.telescope")
-require("core.plugin_config.colorizer")
-require("core.plugin_config.toggleterm")
-require("core.plugin_config.peek")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
--- Set nvim keybindings and apppereance
-require("core.keymaps")
-require("core.nvimconfig")
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup("plugins")
+
+-- Other nvim config
+require("keymaps")
+require("nvimconfig")
+

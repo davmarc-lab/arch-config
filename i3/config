@@ -276,7 +276,7 @@ bindsym $mod+Shift+p exec poweroff
 
 # Screen capture selection, close after copy
 bindsym Print exec --no-startup-id flameshot gui -r | xclip -selection clipboard -t image/png && killall flameshot 
-
+bindsym Shift+Print exec --no-startup-id flameshot gui
 ## Gaps control
 
 # Sets the borders of the windwos hiding the top bar with the name
