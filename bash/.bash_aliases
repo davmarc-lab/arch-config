@@ -53,5 +53,8 @@ alias yay-update="yay -Syu ; echo \"--- Yay packages updated ---\""
 # full system update
 alias full-update="sudo pacman -Syu ; yay -Syu ; echo \"--- Full system update completed ---\""
 
+# alias for generating a formatting config for clangd, clangd mason formatter required
+alias clangd-format="~/.local/share/nvim/mason/bin/clang-format"
+
 # funny
 # alias porcodio="echo BRAVO"

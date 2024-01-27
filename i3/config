@@ -221,7 +221,7 @@ workspace 10 output $fm
 ## Program autostart
 
 # Disable window focus with mouse
-#focus_follows_mouse no
+# focus_follows_mouse no
 
 # Do not focus preview window on open
 no_focus [title="^Peek preview$"]
