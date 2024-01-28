@@ -13,3 +13,4 @@
 .config/rofi/* rofi
 .config/spicetify/* spicetify
 .config/Thunar/* Thunar
+.config/dunst/* dunst
