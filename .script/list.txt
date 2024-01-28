@@ -11,6 +11,5 @@
 .config/glava/* glava
 .config/ohmyposh/* ohmyposh
 .config/rofi/* rofi
-.config/spicetify/* spicetify
 .config/Thunar/* Thunar
 .config/dunst/* dunst
