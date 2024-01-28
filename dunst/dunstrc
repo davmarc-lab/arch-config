@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = (0, 400)
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -88,7 +88,7 @@
     horizontal_padding = 8
 
     # Padding between text and icon.
-    text_icon_padding = 0
+    text_icon_padding = 8
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -123,7 +123,7 @@
 
     ### Text ###
 
-    font = Monospace 8
+    font = DejaVu Sans Mono 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -163,7 +163,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%a</b>\n%s"
+    format = "<b>%a</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -295,8 +295,8 @@
     # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, open_url, close_current
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = open_url, close_current
     mouse_right_click = close_all
 
 # Experimental features that may or may not work correctly. Do not expect them

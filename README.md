@@ -10,6 +10,7 @@ Hello, this is my first rice of arch using i3 window manager. I know it's pretty
   - [Spicetify theme](#spicetify-theme)
 - [What I've done](#what-ive-done)
 - [I'm currently working on](#im-currently-working-on)
+- [Additional info](#additional-info)
 <!--toc:end-->
 
 ## Images
@@ -53,4 +54,11 @@ In these configuration files you will find:
 - [x] fixing neovim configuration because it's still not perfect but usable
 - [ ] implementing more feature with i3
 - [ ] better audio configuration
+- [ ] findig a best way to use doom theme in nvim
 - [ ] customize Thunar file explorer
+
+## Additional info
+
+For nvim configuration i've used the startup nvim plugin to have a startup screen.
+I've created my own theme in the plugin folder and added a file named `doom.lua`, with
+the configuration for the DOOM text. (kinda brute forced)

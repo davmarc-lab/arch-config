@@ -85,6 +85,11 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["marksman"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 		-- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
