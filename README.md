@@ -7,7 +7,7 @@ Hello, this is my first rice of arch using i3 window manager. I know it's pretty
 - [Images](#images)
   - [Alacritty](#alacritty)
   - [Neovim](#neovim)
-  - [Spotify theme](#spotify-theme)
+  - [Spicetify theme](#spicetify-theme)
 - [What I've done](#what-ive-done)
 - [I'm currently working on](#im-currently-working-on)
 <!--toc:end-->
@@ -26,7 +26,7 @@ Hello, this is my first rice of arch using i3 window manager. I know it's pretty
 
 ![image](assets/nvim-2.png)
 
-### Spotify theme
+### Spicetify theme
 
 ![image](assets/spotify-theme.png)
 
