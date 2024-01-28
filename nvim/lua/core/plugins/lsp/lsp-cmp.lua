@@ -12,19 +12,19 @@ return {
 
 		local luasnip = require("luasnip")
 
-        require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},
-            snippet = {
-                expand = function (args)
-                    luasnip.lsp_expand(args.body)
-                end
-            },
+			snippet = {
+				expand = function(args)
+					luasnip.lsp_expand(args.body)
+				end,
+			},
 			window = {
-				completion = cmp.config.window.bordered(),
+				-- completion = cmp.config.window.bordered(),
 				-- documentation = cmp.config.window.bordered(),
 			},
 			mapping = cmp.mapping.preset.insert({
@@ -33,20 +33,14 @@ return {
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-e>"] = cmp.mapping.abort(),
-				["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = 'luasnip' }, -- For luasnip users.
-				{ name = 'path' },
-				{ name = 'buffer' },
-                -- { name = "vsnip" }, -- For vsnip users.
+				{ name = "luasnip" },
+				{ name = "path" },
+				{ name = "buffer" },
 			}),
 		})
-		-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		-- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-		-- require("lspconfig")["lua_ls"].setup({
-		-- 	capabilities = capabilities,
-		-- })
 	end,
 }
