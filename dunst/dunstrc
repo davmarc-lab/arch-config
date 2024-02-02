@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (0, 400)
+    width = (200, 400)
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -163,7 +163,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%a</b>\n%b"
+    format = "<b>%a</b>\n%s\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".

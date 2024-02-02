@@ -31,7 +31,6 @@ alias inraptor="ssh davide.marchetti6\@studio.unibo.it@isi-raptor03.csr.unibo.it
 # connect to isi-raptor server from outside almawifi
 alias outraptor="ssh raptor"
 
-
 # start xampp docker image
 alias twstart="sudo docker container start myXampp"
 

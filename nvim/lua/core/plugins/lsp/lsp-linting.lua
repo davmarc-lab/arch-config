@@ -8,6 +8,7 @@ return {
 			python = { "pylint" },
 			clangd = { "cpplint" },
 			javascript = { "eslint_d" },
+            php = { "phpcs" },
 			markdown = { "markdownlint" },
 		}
 

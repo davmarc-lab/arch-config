@@ -22,7 +22,7 @@ return {
 		local mason_tool_installer = require("mason-tool-installer")
 
 		mason_lspconfig.setup({
-			ensure_installed = { "lua_ls", "clangd", "rust_analyzer" },
+			ensure_installed = { "vimls", "lua_ls", "clangd", "rust_analyzer", "intelephense" },
 			automatic_installation = true,
 		})
 

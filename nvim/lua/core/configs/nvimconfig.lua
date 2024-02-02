@@ -5,6 +5,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_auto_close = 1
 
+
 vim.opt.backspace = "2"
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
@@ -13,8 +14,8 @@ vim.opt.cursorline = false
 vim.opt.autoread = true
 
 -- use spaces for tabs and whatnot
-vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
