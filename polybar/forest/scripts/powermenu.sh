@@ -58,11 +58,11 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
-			betterlockscreen -l
-		fi
+        if [[ -f /usr/bin/i3lock ]]; then
+            i3lock
+        elif [[ -f /usr/bin/xss-lock ]]; then
+            ~/.config/i3/script/lock
+        fi
         ;;
     $suspend)
 		ans=$(confirm_exit &)
