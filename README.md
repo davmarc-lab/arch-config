@@ -3,14 +3,14 @@
 Hello, this is my first rice of arch using i3 window manager. I know it's pretty basic but I have not much confidence and knowledge of this things
 
 <!--toc:start-->
-
-- [Images](#images)
-  - [Alacritty](#alacritty)
-  - [Neovim](#neovim)
-  - [Spicetify theme](#spicetify-theme)
-- [What I've done](#what-ive-done)
-- [I'm currently working on](#im-currently-working-on)
-- [Additional info](#additional-info)
+- [Arch rice using i3](#arch-rice-using-i3)
+  - [Images](#images)
+    - [Alacritty](#alacritty)
+    - [Neovim](#neovim)
+    - [Spicetify theme](#spicetify-theme)
+  - [What I've done](#what-ive-done)
+  - [I'm currently working on](#im-currently-working-on)
+  - [Additional info](#additional-info)
 <!--toc:end-->
 
 ## Images
@@ -50,7 +50,7 @@ In these configuration files you will find:
 
 ## I'm currently working on
 
-- [ ] upgrading polybar style and design
+- [x] upgrading polybar style and design
 - [x] fixing neovim configuration because it's still not perfect but usable
 - [ ] implementing more feature with i3
 - [ ] better audio configuration
