@@ -7,7 +7,6 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 	},
-    event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local cmp = require("cmp")
 
