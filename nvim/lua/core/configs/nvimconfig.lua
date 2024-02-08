@@ -21,6 +21,7 @@ vim.opt.expandtab = true
 
 -- line number
 vim.wo.number = true
+vim.opt.relativenumber = true
 -- wrap line on new line when is too long
 vim.wo.wrap = false
 -- autoindent

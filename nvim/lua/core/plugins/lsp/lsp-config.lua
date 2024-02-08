@@ -40,14 +40,18 @@ return {
 			opts.desc = "Show buffer diagnostics"
 			vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
 
-			opts.desc = "Show line diagnostics"
-			vim.keymap.set("n", "<leader>d", vim.diagnostics.open_float(), opts)
-
 			opts.desc = "Show documentation under the cursor"
-			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
+			vim.keymap.set("n", "<leader>dh", vim.lsp.buf.hover, opts)
 
 			opts.desc = "Restart LSP"
 			vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+
+			-- Idkw the diagnostics floating window doesn't work
+			-- E5108: Error executing lua [string ":lua"]:1: attempt to index field 'diagnostics' (a nil value)
+			-- stack traceback:
+			-- [string ":lua"]:1: in main chunk
+			-- opts.desc = "Show line diagnostics"
+			-- vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostics.open_float(), opts)
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -100,21 +104,20 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["bashls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+        -- Other way to assign keymaps, not synced with previous ones
 		-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 		-- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 		-- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-		-- vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
-		-- vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
-		-- vim.keymap.set("n", "<leader>wl", function()
-		--     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-		-- end, opts)
 		-- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
 		-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 		-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 		-- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-		-- vim.keymap.set("n", "<leader>f", function()
-		--     vim.lsp.buf.format({ async = false })
-		-- end, opts)
+
 	end,
 }
