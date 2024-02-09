@@ -20,7 +20,7 @@ vim.keymap.set("n", "Y", '"+y')
 vim.keymap.set("n", "d", '"_d')
 vim.keymap.set("v", "d", '"_d')
 
--- searche the current word and replace with a new world in the entire file
+-- searche the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- set this file permission to executable
@@ -36,9 +36,9 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 -- Neotree
 
-vim.keymap.set("n", "<c-n>", ":Neotree toggle left<CR>")
-vim.keymap.set("n", "<c-g>", ":Neotree toggle float git_status<CR>")
-vim.keymap.set("n", "<c-b>", ":Neotree toggle float buffers<CR>")
+vim.keymap.set("n", "<C-n>", ":Neotree toggle left<CR>")
+vim.keymap.set("n", "<C-g>", ":Neotree toggle float git_status<CR>")
+vim.keymap.set("n", "<C-b>", ":Neotree toggle float buffers<CR>")
 
 -- Toggleterm
 function _G.set_terminal_keymaps()
@@ -64,4 +64,4 @@ vim.api.nvim_create_user_command("PeekClose", peek.close, {})
 vim.keymap.set("n", "<leader>po", ":PeekOpen<CR>")
 
 -- Undotree
-vim.keymap.set("n", "<leader>t", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
