@@ -6,3 +6,4 @@ require("core.configs")
 
 -- Load lazy plugin manager
 require("core.lazy")
+
