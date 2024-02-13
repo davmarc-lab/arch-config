@@ -61,26 +61,15 @@ return {
 			opts.desc = "Show documentation under the cursor"
 			vim.keymap.set("n", "<leader>dh", vim.lsp.buf.hover, opts)
 
+            opts.desc = "Show diagnostic window"
+            vim.keymap.set({ "n", "v" }, "<space>dq", vim.diagnostic.setloclist, opts)
+
+            opts.desc = "Show diagnostics inline"
+            vim.keymap.set({ "n", "v" }, "<leader>dl", vim.diagnostic.open_float, opts)
+
 			opts.desc = "Restart LSP"
 			vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 
-			-- ---ERROR---
-			-- Idkw the diagnostics floating window doesn't work
-			-- E5108: Error executing lua [string ":lua"]:1: attempt to index field 'diagnostics' (a nil value)
-			-- stack traceback:
-			-- [string ":lua"]:1: in main chunk
-			-- opts.desc = "Show line diagnostics"
-			-- vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostics.open_float(), opts)
-
-			-- Other way to assign keymaps, not synced with previous ones
-			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-			-- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-			-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-			-- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-			-- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
-			-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-			-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-			-- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 		end
 
 		-- Automatically calls all servers setup function and add on_attach and capabilities

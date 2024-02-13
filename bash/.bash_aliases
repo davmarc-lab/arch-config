@@ -4,7 +4,7 @@ alias la="ls -l"
 alias l="ls"
 
 # alias for nvim
-alias vim=nvim
+# alias vim=nvim
 
 # alias for generating my custom clagnd formatter
 alias formatter-clangd="echo -e 'BasedOnStyle: LLVM\nIndentWidth: 4\nTabWidth: 4\nColumnLimit: 150\n' > .clang-format"

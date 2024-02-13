@@ -5,6 +5,8 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_auto_close = 1
 
+-- nvim provider settings
+vim.g.loaded_perl_provider = 0
 
 vim.opt.backspace = "2"
 vim.opt.showcmd = true

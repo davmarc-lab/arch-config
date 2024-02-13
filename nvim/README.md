@@ -1,4 +1,4 @@
-# Introduction to NeoVim configuration
+#  Introduction to NeoVim configuration
 
 <!--toc:start-->
 
