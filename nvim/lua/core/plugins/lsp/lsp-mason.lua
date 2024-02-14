@@ -17,10 +17,10 @@ return {
 			automatic_installation = true,
 		})
 
-        -- Configuration for automatic setup lsp servers
+		-- Configuration for automatic setup lsp servers
 
 		local cmp_lsp = require("cmp_nvim_lsp")
-        -- Capabilities for each server
+		-- Capabilities for each server
 		local capabilities = vim.tbl_deep_extend(
 			"force",
 			{},
@@ -28,7 +28,7 @@ return {
 			cmp_lsp.default_capabilities()
 		)
 
-        -- LSP custom keymaps
+		-- LSP custom keymaps
 		local opts = { noremap = true, silent = true }
 		local on_attach = function(_, bufnr)
 			opts.buffer = bufnr
@@ -61,15 +61,14 @@ return {
 			opts.desc = "Show documentation under the cursor"
 			vim.keymap.set("n", "<leader>dh", vim.lsp.buf.hover, opts)
 
-            opts.desc = "Show diagnostic window"
-            vim.keymap.set({ "n", "v" }, "<space>dq", vim.diagnostic.setloclist, opts)
+			opts.desc = "Show diagnostic window"
+			vim.keymap.set({ "n", "v" }, "<space>dq", vim.diagnostic.setloclist, opts)
 
-            opts.desc = "Show diagnostics inline"
-            vim.keymap.set({ "n", "v" }, "<leader>dl", vim.diagnostic.open_float, opts)
+			opts.desc = "Show diagnostics inline"
+			vim.keymap.set({ "n", "v" }, "<leader>dl", vim.diagnostic.open_float, opts)
 
 			opts.desc = "Restart LSP"
 			vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
-
 		end
 
 		-- Automatically calls all servers setup function and add on_attach and capabilities
@@ -80,7 +79,7 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-            -- Custom configuration for lua_ls server
+			-- Custom configuration for lua_ls server
 			["lua_ls"] = function()
 				local lsp_config = require("lspconfig")
 				lsp_config.lua_ls.setup({
@@ -103,7 +102,7 @@ return {
 			end,
 		})
 
-        -- installs some tools automatically
+		-- installs some tools automatically
 		local mason_tool_installer = require("mason-tool-installer")
 		mason_tool_installer.setup({
 			ensure_installed = {
