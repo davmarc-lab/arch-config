@@ -161,6 +161,7 @@ assign [class="firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="Blender"] $ws4
 assign [class="Code"] $ws1
+assign [class="Whatstux"] $ws7
 assign [class="Anydesk"] $ws8
 assign [class="discord"] $ws9
 assign [class="Spotify"] $ws10
@@ -172,7 +173,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# # resize window (you can also use the mouse for that)
+## resize window (you can also use the mouse for that)
 # mode "resize" {
 #         # These bindings trigger as soon as you enter the resize mode
 

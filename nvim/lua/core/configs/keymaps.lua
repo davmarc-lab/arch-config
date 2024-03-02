@@ -24,7 +24,7 @@ vim.keymap.set("v", "d", '"_d')
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- set this file permission to executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>mx", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- change window focus
 vim.keymap.set("n", "<C-h>", "<C-w>h")
@@ -36,3 +36,4 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
+

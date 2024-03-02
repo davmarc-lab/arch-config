@@ -18,6 +18,8 @@ return {
 		-- Autocompletition icons
 		local lspkind = require("lspkind")
 
+		local compare = cmp.config.compare
+
 		cmp.setup({
 			-- Autocompletition icons
 			formatting = {
@@ -50,11 +52,20 @@ return {
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-				{ name = "path" },
-				{ name = "buffer" },
+				{ name = "jupynium", priority = 1000 },
+				{ name = "nvim_lsp", priority = 100 },
+				{ name = "luasnip", priority = 100 },
+				{ name = "path", priority = 100 },
+				{ name = "buffer", priority = 100 },
 			}),
+			sorting = {
+				priority_weight = 1.0,
+				comparators = {
+					compare.score, -- Jupyter kernel completion shows prior to LSP
+					compare.recently_used,
+					compare.locality,
+				},
+			},
 		})
 	end,
 }
